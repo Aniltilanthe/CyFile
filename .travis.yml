@@ -17,7 +17,7 @@ android:
     - extra-android-support
     - extra-android-m2repository
 
-    - sys-img-armeabi-v7a-addon-google_apis-google-android-$ANDROID_API_LEVEL
+    - sys-img-armeabi-v7a-android-$ANDROID_API_LEVEL
   
 before_install:
 - yes | sdkmanager "platforms;android-$ANDROID_API_LEVEL"
