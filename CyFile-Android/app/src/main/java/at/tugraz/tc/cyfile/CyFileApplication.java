@@ -19,7 +19,7 @@ import at.tugraz.tc.cyfile.note.SecureNoteService;
  */
 
 public class CyFileApplication extends Application {
-
+//testing commit
     private NoteComponent mNoteComponent;
 
     @Override
