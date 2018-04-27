@@ -28,7 +28,7 @@ public class DisplayNoteActivity extends BaseActivity {
     NoteService noteService;
 
     private Note loadedNote;
-    private TextView textView;
+    private TextView textContent;
     private TextView textTitle;
 
     private BoomMenuButton buttonContainer;
@@ -51,7 +51,7 @@ public class DisplayNoteActivity extends BaseActivity {
     }
 
     private void initView() {
-        textView = findViewById(R.id.NOTE_CONTENT);
+        textContent = findViewById(R.id.NOTE_CONTENT);
         textTitle = findViewById(R.id.NOTE_TITLE);
 
         buttonContainer = (BoomMenuButton) findViewById(R.id.BTN_CONTAINER);
@@ -102,13 +102,13 @@ public class DisplayNoteActivity extends BaseActivity {
         Log.d("Note Id", loadedNote.getId() + " ");
         Log.d("Note Content", loadedNote.getContent() + " ");
 
-        textView.setText(loadedNote.getContent());
+        textContent.setText(loadedNote.getContent());
         textTitle.setText(loadedNote.getTitle());
     }
 
     public void onSelectSaveNote() {
         String noteTitle = textTitle.getText().toString();
-        String noteContent = textView.getText().toString();
+        String noteContent = textContent.getText().toString();
         Log.d("onSelectSaveNote", "Title:- " + noteTitle);
         Log.d("onSelectSaveNote", "Content:- " + noteContent);
 
