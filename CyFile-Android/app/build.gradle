@@ -13,6 +13,7 @@ android {
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        vectorDrawables.useSupportLibrary = true
     }
     buildTypes {
         release {
@@ -59,6 +60,10 @@ dependencies {
     annotationProcessor "com.google.dagger:dagger-compiler:$dagger_version"
     compileOnly "org.projectlombok:lombok:$lombok_version"
     annotationProcessor "org.projectlombok:lombok:$lombok_version"
+
+    //BAM button from https://github.com/Nightonke/BoomMenu/wiki
+    compile "com.nightonke:boommenu:2.1.1"
+    compile 'com.android.support:design:27.1.1'
 }
 
 
