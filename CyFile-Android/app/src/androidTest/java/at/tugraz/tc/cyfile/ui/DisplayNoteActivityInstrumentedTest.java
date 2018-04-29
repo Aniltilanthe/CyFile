@@ -95,8 +95,8 @@ public class DisplayNoteActivityInstrumentedTest extends BaseInstrumentedTest {
 
         testRule.launchActivity(startIntent);
 
-        onView(withId(R.id.TEXT_TITLE)).check(matches(withText(editedNote.getTitle())));
-        onView(withId(R.id.noteText)).check(matches(withText(editedNote.getContent())));
+        onView(withId(R.id.NOTE_TITLE)).check(matches(withText(editedNote.getTitle())));
+        onView(withId(R.id.NOTE_CONTENT)).check(matches(withText(editedNote.getContent())));
         assertTrue(editedNote.getTitle().length() > 0);
     }
 
@@ -124,11 +124,11 @@ public class DisplayNoteActivityInstrumentedTest extends BaseInstrumentedTest {
 
         testRule.launchActivity(startIntent);
 
-        onView(withId(R.id.TEXT_TITLE))
+        onView(withId(R.id.NOTE_TITLE))
                 .perform(ViewActions.clearText())
                 .perform(ViewActions.typeText("New title"));
 
-        onView(withId(R.id.noteText))
+        onView(withId(R.id.NOTE_CONTENT))
                 .perform(ViewActions.clearText())
                 .perform(ViewActions.typeText("Next text"));
 
